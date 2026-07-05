@@ -114,13 +114,13 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center;
-      padding: 40px 24px 80px;
+      padding: 60px 24px;
       position: relative;
     }
     #capa::after {
       content: '';
       position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%, -60%);
+      transform: translate(-50%, -50%);
       width: 700px; height: 500px;
       background: radial-gradient(ellipse at center, rgba(200,169,110,.07) 0%, transparent 70%);
       pointer-events: none; z-index: 0;
@@ -177,7 +177,9 @@
       display: flex; flex-direction: column; align-items: center; gap: 10px;
       font-family: 'JetBrains Mono', monospace;
       font-size: .6rem; letter-spacing: .18em; text-transform: uppercase;
-      color: var(--muted); position: relative; z-index: 1;
+      color: var(--muted);
+      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+      z-index: 1;
     }
     .scroll-cue::after {
       content: ''; width: 1px; height: 52px;
@@ -476,7 +478,6 @@
         <span class="card-icon">📄</span>
         <h3 class="card-title">Documentos técnicos</h3>
         <ul class="card-list">
-          <li>ART</li>
           <li>Memorial descritivo</li>
           <li>Memorial de cálculo</li>
         </ul>
